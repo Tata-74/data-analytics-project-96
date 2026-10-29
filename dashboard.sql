@@ -142,7 +142,7 @@ ORDER BY
     visitors_count DESC, 
     total_cost asc;
 
-3. -- WITH ad_spend AS (
+3.WITH ad_spend AS (
     -- объединяем расходы из VK и Яндекс
     SELECT 
         campaign_date::date AS visit_date,
