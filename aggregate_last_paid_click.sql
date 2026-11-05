@@ -117,7 +117,7 @@ SELECT
   SUM(CASE WHEN lc.closing_reason = 'Успешно реализовано' OR lc.status_id = 142 THEN lc.amount ELSE 0 END) AS revenue
 FROM last_click lc
 LEFT JOIN costs c ON  
-  lc.visit_date = c.campaign_date -- ⚠️ Это самое важное условие! Связываем дату визита с датой расхода
+  lc.visit_date = c.campaign_date -- Связываем дату визита с датой расхода
   AND lc.utm_source = c.utm_source
   AND lc.utm_medium = c.utm_medium
   AND lc.utm_campaign = c.utm_campaign
